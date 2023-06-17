@@ -33,3 +33,24 @@
 
 
 import './styles/style.css'
+import { base, frameworks, libs, list } from './data/hbsData';
+import baseHbs from "./template/base.hbs";
+import frameworksHbs from "./template/base.hbs";
+import libsHbs from "./template/base.hbs";
+import listHbs from "./template/base.hbs"; 
+    
+const newBase = baseHbs(base);
+console.log(newBase);
+
+const rootEl = document.querySelector(#root);
+rootEl.insertAdjacentHTML("beforeend", newBase);
+
+const newList = listHbs(list);
+rootEl.insertAdjacentHTML("beforeend", newList);
+
+const newFrameworksHbs = frameworksHbs(frameworks);
+rootEl.insertAdjacentHTML('beforeend', newFrameworksHbs);
+
+
+const newLibs = libsHbs(libs);
+rootEl.insertAdjacentHTML("beforeend", newLibs);
